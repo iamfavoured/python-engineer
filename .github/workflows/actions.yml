@@ -3,10 +3,9 @@ name: run main.py
 on:
   schedule:
     - cron: '*/5 * * * *'
-  workflow_dispatch:
 
 permissions:
-  contents: write   # ✅ THIS FIXES YOUR ERROR
+  contents: write
 
 jobs:
   build:
