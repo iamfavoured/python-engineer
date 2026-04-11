@@ -23,7 +23,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - run: python main.py
+      - name: run main.py
+        env:
+          SOME_SECRET: ${{ secrets.SOME_SECRET }}
+        run: python main.py
 
       - run: |
           git config --local user.email "action@github.com"
